@@ -1,0 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Django
+db.sqlite3
+*.log
+
+# Secrets
+.env
+
+# Data (too big for GitHub)
+*.csv
+*.xlsx
+
+# Notebooks and editor
+.ipynb_checkpoints/
+.vscode/
