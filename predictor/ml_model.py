@@ -19,3 +19,8 @@ def get_model():
 def predict_probability(recency, frequency, monetary):
     X = pd.DataFrame([[recency, frequency, monetary]], columns=FEATURES)
     return float(get_model().predict_proba(X)[0][1])
+
+
+def predict_many(df):
+    """Probabilities for many customers at once. df needs recency, frequency, monetary columns."""
+    return get_model().predict_proba(df[FEATURES])[:, 1]
