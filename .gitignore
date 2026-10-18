@@ -17,3 +17,6 @@ db.sqlite3
 # Notebooks and editor
 .ipynb_checkpoints/
 .vscode/
+
+
+!predictor/data/customers_snapshot.csv

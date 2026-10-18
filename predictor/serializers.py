@@ -14,6 +14,7 @@ class PredictionSerializer(serializers.ModelSerializer):
         model = Prediction
         fields = [
             "id",
+            "customer_id",
             "recency",
             "frequency",
             "monetary",

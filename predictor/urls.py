@@ -6,4 +6,5 @@ urlpatterns = [
     path("health/", views.health),
     path("predict/", views.predict),
     path("predictions/", views.history),
+    path("customers/<int:customer_id>/predict/", views.predict_customer),
 ]

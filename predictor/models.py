@@ -1,10 +1,22 @@
 from django.db import models
 
-# Create your models here.
-from django.db import models
+
+class Customer(models.Model):
+    """One row per customer: their RFM numbers on the snapshot date."""
+
+    customer_id = models.IntegerField(unique=True)
+    recency = models.FloatField()
+    frequency = models.IntegerField()
+    monetary = models.FloatField()
+
+    def __str__(self):
+        return f"Customer {self.customer_id}"
 
 
 class Prediction(models.Model):
+    customer_id = models.IntegerField(
+        null=True, blank=True
+    )  # filled when predicted by ID
     recency = models.FloatField()
     frequency = models.FloatField()
     monetary = models.FloatField()
