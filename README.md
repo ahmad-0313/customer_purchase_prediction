@@ -4,8 +4,6 @@ Predict which customers of an online shop will buy again in the next 90 days, an
 
 A machine learning model (XGBoost) scores every customer from three simple numbers. A Django REST API serves the predictions, and a React dashboard lets a shop owner see the big picture, find valuable customers who are unlikely to return, and check any single customer.
 
-![Dashboard](docs/dashboard.png)
-
 ## What it does
 
 - **Dashboard:** totals, how many customers are likely to return, a risk-group chart, and a table of big spenders who are unlikely to come back (so they can be contacted first).
